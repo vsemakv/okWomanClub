@@ -1,0 +1,526 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class],
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+body {
+  font-family: "FuturaBT-Book";
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: text;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+}
+
+/* класс для индикации блоков */
+.outline_red {
+  border: 1px solid;
+  border-color: red;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*Один общий оутлайн для отмечания компонентов на верстаемых страницах*/
+.devOutline {
+  outline-color: red;
+  outline-width: 1px;
+  outline-style: inset;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+body {
+  font-family: "Gilroy", sans-serif;
+  background-color: #ffffff;
+  color: #242424;
+}
+
+.main {
+  background: linear-gradient(to bottom right, #FFFBF5, #FFD2DE);
+  padding: 25px 100px 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.header__link a {
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.header__link a:hover {
+  color: #313131;
+  transition: all 0.3s;
+}
+.header__auth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.header__button {
+  background-color: #EF358B;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 6px 23px;
+  cursor: pointer;
+  line-height: 150%;
+  letter-spacing: 0.3px;
+  font-weight: 100;
+  font-family: "Gilroy", sans-serif;
+  transition: all 0.3s;
+}
+.header__button:hover {
+  background-color: #f54798;
+  transition: all 0.3s;
+}
+
+.hero {
+  display: flex;
+  gap: 49px;
+  padding-top: 25px;
+}
+.hero__book {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.hero__book-image {
+  width: 94px;
+  height: 110px;
+}
+.hero__book-text {
+  font-size: 24px;
+  letter-spacing: 0.3px;
+  line-height: 144%;
+  padding-top: 16px;
+}
+.hero__book-text span {
+  font-weight: bold;
+}
+.hero__book-text span:first-child {
+  color: #EF358B;
+}
+.hero__book-text span:last-child {
+  color: #242424;
+}
+.hero__title {
+  margin-top: 20px;
+  font-weight: 800;
+  font-size: 85px;
+  letter-spacing: 0.3px;
+  line-height: 115%;
+  text-transform: uppercase;
+}
+.hero__title span {
+  color: #EF358B;
+}
+.hero__description {
+  margin-top: 15px;
+  font-size: 18px;
+}
+.hero__description span {
+  font-weight: bold;
+}
+.hero__info {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px 0px 20px 45px;
+  margin: 21px 0px 0px 25px;
+  max-width: 450px;
+  position: relative;
+}
+.hero__info::before {
+  display: block;
+  content: "";
+  background-image: url("/images/svg/warn.svg");
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+}
+.hero__info p {
+  font-size: 18px;
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+.hero__info p span {
+  font-weight: 600;
+}
+.hero__button {
+  margin-top: 25px;
+  background-color: #EF358B;
+  color: #ffffff;
+  padding: 15px 48px;
+  border-radius: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 160%;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+.hero__button:hover {
+  transition: all 0.3s;
+  background-color: #f54798;
+}
+.hero__button::after {
+  position: absolute;
+  content: "";
+  background-image: url("/images/svg/arrow.svg");
+  width: 117px;
+  height: 71px;
+  right: -157px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.hero__image {
+  position: relative;
+}
+.hero__image span {
+  position: relative;
+  display: block;
+}
+.hero__image span::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/bigElipse.svg");
+  background-size: cover;
+  width: 64px;
+  height: 64px;
+  top: -686px;
+  left: 20px;
+  z-index: 1;
+}
+.hero__image span::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/smallElipse.svg");
+  width: 14px;
+  height: 14px;
+  top: -700px;
+  left: 100px;
+}
+.hero__image::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/bigElipse.svg");
+  width: 85px;
+  height: 85px;
+  top: -40px;
+  right: -90px;
+  z-index: 1;
+}
+.hero__image::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/smallElipse.svg");
+  width: 15px;
+  height: 15px;
+  top: 60px;
+  right: 10px;
+}
+
+.info {
+  padding: 99px 130px 100px;
+}
+.info__cases {
+  background-color: #FFF6EB;
+  padding: 70px;
+  border-radius: 10px;
+  position: relative;
+}
+.info__cases::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/shape.svg");
+  background-size: cover;
+  width: 157px;
+  height: 157px;
+  top: 15px;
+  right: -40px;
+}
+.info__cases::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/dots.svg");
+  background-size: cover;
+  width: 149px;
+  height: 149px;
+  top: 11px;
+  left: 16px;
+}
+.info__title {
+  padding: 0px 100px;
+  margin-bottom: 50px;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 130%;
+  letter-spacing: 0.3px;
+}
+.info__title span {
+  color: #EF358B;
+}
+.info__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 35px;
+  grid-row-gap: 20px;
+}
+.info__cards-item {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding: 41px 37px;
+  overflow: visible;
+  max-height: 170px;
+}
+.info__cards-item img {
+  width: 140px;
+  height: 150px;
+  margin-left: -55px;
+}
+.info__cards-text p {
+  font-size: 21px;
+  font-weight: normal;
+}
+.info__cards-text p span {
+  font-weight: bold;
+}
+.info__solution {
+  margin-top: 70px;
+  padding: 25px 40px 25px 0px;
+  background-color: #FFCF5D;
+  border-radius: 150px 10px 10px 150px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-height: 237px;
+}
+.info__solution img {
+  width: 237px;
+  height: 237px;
+}
+.info__questions-item {
+  padding: 11px 0px;
+  color: #242424;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  border-radius: 115px;
+  letter-spacing: 0.3px;
+  line-height: 150%;
+  text-align: center;
+  border: 1px solid #FFCF5D;
+}
+.info__questions-item:first-child {
+  transform: rotate(-4.7deg);
+  width: 306px;
+  position: relative;
+}
+.info__questions-item:first-child::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/ques.svg");
+  background-size: cover;
+  width: 35px;
+  height: 55px;
+  top: -35px;
+  left: -50px;
+}
+.info__questions-item:nth-child(2) {
+  transform: rotate(8deg);
+  width: 228px;
+  margin: 10px 0px 2px 65px;
+  position: relative;
+}
+.info__questions-item:nth-child(2)::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/ques.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 38px;
+  transform: rotate(18deg);
+  top: 30px;
+  left: -90px;
+}
+.info__questions-item:last-child {
+  transform: rotate(4.2deg);
+  width: 386px;
+  position: relative;
+}
+.info__questions-item:last-child::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/ques.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 37px;
+  transform: rotate(30deg);
+  top: 30px;
+  left: -40px;
+  z-index: 2;
+}
+.info__text {
+  font-size: 21px;
+  line-height: 140%;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+.info__text::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/images/svg/whiteArrow.svg");
+  background-size: cover;
+  width: 96px;
+  height: 56px;
+  top: 30px;
+  left: -110px;
+}
+.info__text span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

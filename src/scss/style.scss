@@ -1,0 +1,443 @@
+@import '_normalize';
+@import '_fonts';
+$pink: #EF358B;
+$main: #242424;
+
+body {
+  font-family: "Gilroy", sans-serif;
+  background-color: #ffffff;
+  color: $main;
+}
+
+.main {
+  background: linear-gradient(to bottom right, #FFFBF5, #FFD2DE);
+  padding: 25px 100px 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__link {
+
+    a { 
+      font-size: 16px;
+      transition: all 0.3s;
+      
+      &:hover { 
+        color: #313131;
+        transition: all 0.3s;
+      }
+    }
+    
+  }
+
+  &__auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__button {
+    background-color: $pink;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 6px 23px;
+    cursor: pointer;
+    line-height: 150%;
+    letter-spacing: 0.3px;
+    font-weight: 100;
+    font-family: "Gilroy", sans-serif;
+    transition: all 0.3s;
+
+    &:hover { 
+      background-color: #f54798;
+      transition: all 0.3s;
+    }
+  }
+}
+.hero { 
+  display: flex;
+  gap: 49px;
+
+  padding-top: 25px;
+  &__book { 
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+
+    &-image { 
+      width: 94px;
+      height: 110px;
+    }
+    &-text { 
+      font-size: 24px;
+      letter-spacing: 0.3px;
+      line-height: 144%;
+      padding-top: 16px;
+      span { 
+        font-weight: bold;
+
+        &:first-child { 
+          color: $pink ;
+        }
+        &:last-child{ 
+          color: $main;
+        }
+        
+      }
+    }
+  }
+  &__title { 
+    margin-top: 20px;
+
+    font-weight: 800;
+    font-size: 85px;
+    letter-spacing: 0.3px;
+    line-height: 115%;
+    text-transform: uppercase;
+
+    span { 
+      color: $pink;
+    }
+  }
+  &__description { 
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    span { 
+      font-weight: bold;
+    }
+  }
+  &__info { 
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px 0px 20px 45px;
+    margin: 21px 0px 0px 25px;
+    max-width: 450px;
+
+    position: relative;
+
+    &::before { 
+      display: block;
+      content: "";
+      background-image: url("/images/svg/warn.svg");
+      border: 10px solid #ffffff;
+      border-radius: 50%;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+    }
+    p { 
+      font-size: 18px;
+      display: inline-block;
+      width: fit-content;
+      max-width: 100%;
+      span { 
+        font-weight: 600;
+      }
+    }
+    
+  }
+  &__button { 
+    margin-top: 25px;
+
+    background-color: $pink;
+    color: #ffffff;
+    padding: 15px 48px;
+    border-radius: 45px;
+
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    line-height: 160%;
+    
+    cursor: pointer;
+
+    transition: all .3s;
+
+    &:hover { 
+      transition: all .3s;
+      background-color: #f54798;
+    }
+
+    position: relative;
+
+    &::after { 
+      position: absolute;
+      content: "";
+      background-image: url("/images/svg/arrow.svg");
+      width: 117px;
+      height: 71px;
+      right: -157px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+  &__image { 
+    position: relative;
+    
+    span { 
+      position: relative;
+      display: block;
+
+      &::after{ 
+        position: absolute;
+        display: block;
+        content: "";
+        background-image: url("/images/svg/bigElipse.svg");
+        background-size: cover;
+        width: 64px;
+        height: 64px;
+        top: -686px;
+        left: 20px;
+        z-index: 1;
+      }
+      &::before { 
+        position: absolute;
+        display: block;
+        content: "";
+        background-image: url("/images/svg/smallElipse.svg");
+        width: 14px;
+        height: 14px;
+        top: -700px;
+        left: 100px;
+      }
+    }
+    &::after{ 
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("/images/svg/bigElipse.svg");
+      width: 85px;
+      height: 85px;
+      top: -40px;
+      right: -90px;
+      z-index: 1;
+    }
+    &::before { 
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("/images/svg/smallElipse.svg");
+      width: 15px;
+      height: 15px;
+      top: 60px;
+      right: 10px;
+    }
+  }
+}
+.info {
+  padding: 99px 130px 100px;
+
+  &__cases{ 
+    background-color: #FFF6EB;
+    padding: 70px;
+    border-radius: 10px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("/images/svg/shape.svg");
+      background-size: cover;
+      width: 157px;
+      height: 157px;
+      top: 15px;
+      right: -40px;
+    }
+    &::before { 
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("/images/svg/dots.svg");
+      background-size: cover;
+      width: 149px;
+      height: 149px;
+      top: 11px;
+      left: 16px;
+    }
+  }
+  &__title { 
+    padding: 0px 100px;
+    margin-bottom: 50px;
+
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 130%;
+    letter-spacing: 0.3px;
+    span {
+      color: $pink;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 20px;
+
+    &-item {
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      padding: 41px 37px;
+      overflow: visible; 
+
+      max-height: 170px;
+      img { 
+        width: 140px;
+        height: 150px;
+        margin-left: -55px;
+      }
+    }
+    &-text{
+
+      p {
+        font-size: 21px;
+        font-weight: normal;
+        span { 
+          font-weight: bold; 
+        }
+      }
+    }
+  }
+  &__solution { 
+    margin-top: 70px;
+
+    padding: 25px 40px 25px 0px;
+
+    background-color: #FFCF5D;
+    border-radius: 150px 10px 10px 150px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    max-height: 237px;
+    img { 
+      width: 237px;
+      height: 237px;
+    }
+  }
+  &__questions{ 
+
+    &-item { 
+      padding: 11px 0px;
+      color: $main;
+      font-size: 16px;
+      font-weight: 500;
+      background-color: #FFFFFF;
+      border-radius: 115px;
+      letter-spacing: 0.3px;
+      line-height: 150%;
+      text-align: center;
+      border: 1px solid #FFCF5D;
+
+      &:first-child { 
+        transform: rotate(-4.7deg);
+        width: 306px;
+        position: relative;
+
+        &::before { 
+          position: absolute;
+          display: block;
+          content: "";
+          background-image: url("/images/svg/ques.svg");
+          background-size: cover;
+          width: 35px;
+          height: 55px;
+          top: -35px;
+          left: -50px;
+        }
+      }
+      &:nth-child(2) { 
+        transform: rotate(8deg);
+        width: 228px;
+        margin: 10px 0px 2px 65px;
+        position: relative;
+
+        &::before { 
+          position: absolute;
+          display: block;
+          content: "";
+          background-image: url("/images/svg/ques.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 25px;
+          height: 38px;
+          transform: rotate(18deg);
+          top: 30px;
+          left: -90px;
+        }
+      }
+      &:last-child { 
+        transform: rotate(4.2deg);
+        width: 386px;
+        position: relative;
+
+        &::before { 
+          position: absolute;
+          display: block;
+          content: "";
+          background-image: url("/images/svg/ques.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 30px;
+          height: 37px;
+          transform: rotate(30deg);
+          top: 30px;
+          left: -40px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+  &__text { 
+    font-size: 21px;
+    line-height: 140%;
+    letter-spacing: 0.3px;
+
+    position: relative;
+
+    &::before { 
+      position: absolute;
+      display: block;
+      content: "";
+      background-image: url("/images/svg/whiteArrow.svg");
+      background-size: cover;
+      width: 96px;
+      height: 56px;
+      top: 30px;
+      left: -110px;
+    }
+
+    span { 
+      font-weight: bold;
+    }
+  }
+} 
