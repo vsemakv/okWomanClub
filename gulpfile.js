@@ -84,4 +84,5 @@ exports.scripts = scripts;
 exports.copyFonts = copyFonts;
 exports.watch = watch;
 exports.default = build;
+exports.build = build; 
 exports.copyImages = copyImages;
