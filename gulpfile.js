@@ -25,6 +25,10 @@ const paths = {
   fonts: {
     src: 'src/fonts/**/*',
     dest: 'dist/fonts/'
+  },
+  favicon: {
+    src: 'src/images/icons/favicon.ico',
+    dest: 'dist/' 
   }
 };
 
@@ -68,13 +72,18 @@ function watchFiles() {
   gulp.watch(paths.fonts.src, copyFonts);
   gulp.watch(paths.images.src, copyImages);
 }
+function copyFavicon() {
+  return gulp.src(paths.favicon.src)
+    .pipe(gulp.dest(paths.favicon.dest));
+}
+
 function copyImages() {
     return gulp.src(paths.images.src)
       .pipe(gulp.dest(paths.images.dest));
   }
   
 const build = gulp.series(
-  gulp.parallel(compilePug, compileSass, scripts, copyImages, copyFonts)
+  gulp.parallel(compilePug, compileSass, scripts, copyImages, copyFonts, copyFavicon)
 );
 const watch = gulp.series(build, watchFiles);
 
