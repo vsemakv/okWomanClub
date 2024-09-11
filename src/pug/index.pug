@@ -19,6 +19,23 @@ html
                     a(href="#") Матеріали
                 li.header__link 
                     a(href="#") Вартість
+            ul.header__burger.burger-button
+                li 
+                li
+                li
+            .header__mobile.burger-menu     
+                ul.header__mobile-links
+                    li.header__link 
+                        a(href="#") Про платформу
+                    li.header__link 
+                        a(href="#") Відгуки
+                    li.header__link 
+                        a(href="#") Матеріали
+                    li.header__link 
+                        a(href="#") Вартість
+                .header__mobile-buttons
+                    button.header__button Вхід
+                    button.header__button Реєстрація
             .header__auth
                 button.header__button Вхід
                 button.header__button Реєстрація
@@ -40,7 +57,7 @@ html
                         span Ольги Керхер
                 button.hero__button Забрати матеріали
             .hero__image
-                img(src="/images/png/main.png", alt="Main photo" width="100%" height="100%")
+                img(src="/images/png/main.png", alt="Main photo" )
                 span
     section.info 
         .info__cases 
@@ -83,4 +100,4 @@ html
                 br 
                 | Бо на жаль, немає знань, як дати стосункам нове життя. Немає розуміння, як прожити розставання і перейти в нові щасливі стосунки
 
-//- script(src='js/main.js')
+    script(src='/js/script.js')

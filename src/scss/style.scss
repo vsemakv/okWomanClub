@@ -12,18 +12,78 @@ body {
 .main {
   background: linear-gradient(to bottom right, #FFFBF5, #FFD2DE);
   padding: 25px 100px 0px;
+  @media screen and (max-width: 768px) {
+    padding: 25px 50px 25px;
+  }
+  @media screen and (min-width: 390px) and ( max-width: 768px) {
+    padding: 16px 25px 25px;
+  }
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    &__mobile { 
+      display: none;
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: linear-gradient(to bottom right, #FFFBF5, #FFD2DE);
+
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        z-index: 4;
+
+        padding: 16px;
+        margin-top: 80px;
+      }
+      &-buttons { 
+        @media screen and (min-width: 390px) and ( max-width: 768px) {
+          margin-top: 64px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 32px;
+        }
+      }
+    }
+    &__burger { 
+      @media screen and (max-width: 768px) {
+        width: 50px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        li { 
+          border-radius: 4px;
+          height: 4px;
+          width: 100%;
+          background-color: $pink;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+          
+          &:nth-child(2){ 
+            margin: 5px 0px;
+          }
+        }
+    }
+  }
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__link {
@@ -31,7 +91,9 @@ body {
     a { 
       font-size: 16px;
       transition: all 0.3s;
-      
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        font-size: 48px;
+      }
       &:hover { 
         color: #313131;
         transition: all 0.3s;
@@ -45,6 +107,11 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    
   }
 
   &__button {
@@ -56,10 +123,12 @@ body {
     cursor: pointer;
     line-height: 150%;
     letter-spacing: 0.3px;
-    font-weight: 100;
     font-family: "Gilroy", sans-serif;
     transition: all 0.3s;
+    @media screen and (min-width: 390px) and ( max-width: 768px) {
+      font-size: 24px;
 
+    }
     &:hover { 
       background-color: #f54798;
       transition: all 0.3s;
@@ -71,6 +140,13 @@ body {
   gap: 49px;
 
   padding-top: 25px;
+  &__text { 
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
   &__book { 
     display: flex; 
     justify-content: flex-start;
@@ -86,6 +162,9 @@ body {
       letter-spacing: 0.3px;
       line-height: 144%;
       padding-top: 16px;
+      @media screen and (max-width: 768px) {
+        font-size: 21px;
+      }
       span { 
         font-weight: bold;
 
@@ -108,6 +187,13 @@ body {
     line-height: 115%;
     text-transform: uppercase;
 
+    @media screen and (max-width: 768px) {
+      font-size: 60px;
+      text-align: center;
+    }
+    @media screen and (max-width: 390px) {
+      font-size: 36px;
+    }
     span { 
       color: $pink;
     }
@@ -117,6 +203,12 @@ body {
 
     font-size: 18px;
 
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 390px) {
+      font-size: 16px;
+    }
     span { 
       font-weight: bold;
     }
@@ -152,6 +244,9 @@ body {
       max-width: 100%;
       span { 
         font-weight: 600;
+      }
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        font-size: 14px;
       }
     }
     
@@ -190,11 +285,26 @@ body {
       top: 50%;
       transform: translateY(-50%);
       pointer-events: none;
+
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        width: 55px;
+        height: 55px;
+        right: -55px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
   &__image { 
     position: relative;
-    
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    img { 
+      max-width: 705px;
+      max-height: 688px;
+    }
     span { 
       position: relative;
       display: block;
@@ -247,14 +357,22 @@ body {
 }
 .info {
   padding: 99px 130px 100px;
-
+  @media screen and (max-width: 768px) {
+    padding: 32px 40px 40px;
+  }
+  @media screen and (min-width: 390px) and (max-width: 768px) {
+    padding: 16px 25px;
+  }
   &__cases{ 
     background-color: #FFF6EB;
     padding: 70px;
     border-radius: 10px;
 
     position: relative;
-
+    @media screen and (max-width: 500px) {
+      padding: 16px;
+    }
+    
     &::after {
       position: absolute;
       display: block;
@@ -265,6 +383,16 @@ body {
       height: 157px;
       top: 15px;
       right: -40px;
+      @media screen and (max-width: 768px) {
+        height: 100px;
+        width: 100px;
+      }
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        width: 85px;
+        height: 85px;
+        top: 45px;
+        right: -20px;
+      }
     }
     &::before { 
       position: absolute;
@@ -276,6 +404,15 @@ body {
       height: 149px;
       top: 11px;
       left: 16px;
+      z-index: 1;
+      @media screen and (max-width: 768px) {
+        height: 100px;
+        width: 100px;
+      }
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        width: 85px;
+        height: 85px;
+      }
     }
   }
   &__title { 
@@ -287,8 +424,19 @@ body {
     text-align: center;
     line-height: 130%;
     letter-spacing: 0.3px;
+    position: relative;
+    z-index: 2;
     span {
       color: $pink;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+      padding: 0 48px;
+    }
+    @media screen and (min-width: 390px) and ( max-width: 768px) {
+      font-size: 24px;
+      padding: 0;
     }
   }
   &__cards {
@@ -298,6 +446,13 @@ body {
     grid-column-gap: 35px;
     grid-row-gap: 20px;
 
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (min-width: 390px) and ( max-width: 768px) {
+      gap: 16px;
+    }
     &-item {
       background-color: #FFFFFF;
       border-radius: 10px;
@@ -309,10 +464,20 @@ body {
       overflow: visible; 
 
       max-height: 170px;
+
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        gap: 16px;
+      }
       img { 
         width: 140px;
         height: 150px;
         margin-left: -55px;
+
+        @media screen and (min-width: 390px) and ( max-width: 768px) {
+          width: 105px;
+          height: 105px;
+          margin-left: -40px;
+        }
       }
     }
     &-text{
@@ -320,6 +485,10 @@ body {
       p {
         font-size: 21px;
         font-weight: normal;
+
+        @media screen and (min-width: 390px) and ( max-width: 768px) {
+          font-size: 16px;
+        }
         span { 
           font-weight: bold; 
         }
@@ -339,9 +508,21 @@ body {
     gap: 20px;
 
     max-height: 237px;
+    @media screen and (max-width: 390px) {
+      margin-top: 35px;
+    }
     img { 
       width: 237px;
       height: 237px;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      border-radius: 150px 150px 10px 10px;
+      max-height: none;
+      padding: 25px;
+    }
+    @media screen and (min-width: 390px) and ( max-width: 768px) {
+      border-radius: 100px 100px 15px 15px;
     }
   }
   &__questions{ 
@@ -373,6 +554,13 @@ body {
           height: 55px;
           top: -35px;
           left: -50px;
+          @media screen and (max-width: 768px) {
+            left: 100%;
+            top: -80px;
+          }
+          @media screen and (min-width: 390px) and ( max-width: 768px) {
+            left: 250px;
+          }
         }
       }
       &:nth-child(2) { 
@@ -380,7 +568,10 @@ body {
         width: 228px;
         margin: 10px 0px 2px 65px;
         position: relative;
-
+        @media screen and (min-width: 390px) and ( max-width: 768px) {
+          margin-left: 100px;
+          width: 200px;
+        }
         &::before { 
           position: absolute;
           display: block;
@@ -393,13 +584,24 @@ body {
           transform: rotate(18deg);
           top: 30px;
           left: -90px;
+          @media screen and (max-width: 768px) {
+            left: 100%;
+            top: -20px;
+          }
+          @media screen and (max-width: 500px) {
+            left: -115px;
+            top: -200px;
+            transform: rotate(38deg);
+          }
         }
       }
       &:last-child { 
         transform: rotate(4.2deg);
         width: 386px;
         position: relative;
-
+        @media screen and (min-width: 390px) and ( max-width: 768px) {
+          width: 300px;
+        }
         &::before { 
           position: absolute;
           display: block;
@@ -413,6 +615,14 @@ body {
           top: 30px;
           left: -40px;
           z-index: 2;
+          @media screen and (max-width: 768px) {
+            left: 100%;
+            top: 0;
+          }
+          @media screen and (min-width: 390px) and ( max-width: 768px) {
+            left: 220px;
+            top: -360px;
+          }
         }
       }
     }
@@ -423,7 +633,13 @@ body {
     letter-spacing: 0.3px;
 
     position: relative;
-
+    @media screen and (max-width: 768px) {
+      margin-top: 24px;
+      text-align: center;
+    }
+    @media screen and (max-width: 390px) {
+      font-size: 18px;
+    }
     &::before { 
       position: absolute;
       display: block;
@@ -434,6 +650,10 @@ body {
       height: 56px;
       top: 30px;
       left: -110px;
+
+      @media screen and (min-width: 390px) and ( max-width: 768px) {
+        display: none;
+      }
     }
 
     span { 
@@ -441,3 +661,19 @@ body {
     }
   }
 } 
+.menu-open { 
+  display: flex;
+}
+.menu-closer {
+  li {
+    &:nth-child(1) {
+      transform: translateY(13px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+}
