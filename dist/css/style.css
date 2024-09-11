@@ -150,7 +150,7 @@ body {
     padding: 25px 50px 25px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .main {
     padding: 16px 25px 25px;
   }
@@ -164,7 +164,7 @@ body {
 .header__mobile {
   display: none;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .header__mobile {
     width: 100%;
     height: 100vh;
@@ -180,7 +180,7 @@ body {
     margin-top: 80px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .header__mobile-buttons {
     margin-top: 64px;
     display: flex;
@@ -224,7 +224,7 @@ body {
   font-size: 16px;
   transition: all 0.3s;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .header__link a {
     font-size: 48px;
   }
@@ -256,7 +256,7 @@ body {
   font-family: "Gilroy", sans-serif;
   transition: all 0.3s;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .header__button {
     font-size: 24px;
   }
@@ -322,7 +322,7 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
   .hero__title {
     font-size: 36px;
   }
@@ -339,7 +339,7 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
   .hero__description {
     font-size: 16px;
   }
@@ -380,7 +380,7 @@ body {
 .hero__info p span {
   font-weight: 600;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .hero__info p {
     font-size: 14px;
   }
@@ -414,11 +414,11 @@ body {
   transform: translateY(-50%);
   pointer-events: none;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .hero__button::after {
     width: 55px;
     height: 55px;
-    right: -55px;
+    right: -54px;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -491,7 +491,7 @@ body {
     padding: 32px 40px 40px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info {
     padding: 16px 25px;
   }
@@ -524,7 +524,7 @@ body {
     width: 100px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__cases::after {
     width: 85px;
     height: 85px;
@@ -550,7 +550,7 @@ body {
     width: 100px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__cases::before {
     width: 85px;
     height: 85px;
@@ -576,7 +576,7 @@ body {
     padding: 0 48px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__title {
     font-size: 24px;
     padding: 0;
@@ -595,7 +595,7 @@ body {
     flex-direction: column;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__cards {
     gap: 16px;
   }
@@ -611,7 +611,7 @@ body {
   overflow: visible;
   max-height: 170px;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__cards-item {
     gap: 16px;
   }
@@ -621,7 +621,7 @@ body {
   height: 150px;
   margin-left: -55px;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__cards-item img {
     width: 105px;
     height: 105px;
@@ -632,7 +632,7 @@ body {
   font-size: 21px;
   font-weight: normal;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__cards-text p {
     font-size: 16px;
   }
@@ -650,7 +650,7 @@ body {
   gap: 20px;
   max-height: 237px;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
   .info__solution {
     margin-top: 35px;
   }
@@ -667,7 +667,7 @@ body {
     padding: 25px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__solution {
     border-radius: 100px 100px 15px 15px;
   }
@@ -706,7 +706,7 @@ body {
     top: -80px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__questions-item:first-child::before {
     left: 250px;
   }
@@ -717,7 +717,7 @@ body {
   margin: 10px 0px 2px 65px;
   position: relative;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__questions-item:nth-child(2) {
     margin-left: 100px;
     width: 200px;
@@ -754,7 +754,7 @@ body {
   width: 386px;
   position: relative;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__questions-item:last-child {
     width: 300px;
   }
@@ -779,7 +779,7 @@ body {
     top: 0;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__questions-item:last-child::before {
     left: 220px;
     top: -360px;
@@ -797,7 +797,7 @@ body {
     text-align: center;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
   .info__text {
     font-size: 18px;
   }
@@ -813,7 +813,7 @@ body {
   top: 30px;
   left: -110px;
 }
-@media screen and (min-width: 390px) and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 768px) {
   .info__text::before {
     display: none;
   }
